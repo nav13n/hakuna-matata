@@ -10,7 +10,7 @@ EX_GRAPH2={0:set([1,4,5]),1:set([2,6]),2:set([3,7]),3:set([7]),4:set([1]),5:set(
 
 def make_complete_graph(num_nodes):
      """
-     Function that creates a complete directed graph
+     Function creates a complete directed graph
      Returns a dictionary corresponding to a complete directed graph with the specified number of nodes"""
      answer_graph={}
      if(num_nodes>0):
@@ -20,7 +20,9 @@ def make_complete_graph(num_nodes):
 
 
 def compute_in_degrees(digraph):
-    """ Returns a dictionary whose keys correspond to in-degrees of nodes in the graph."""
+    """
+    Function computes indegrees of a complete directed graph
+    Returns a dictionary whose keys correspond to in-degrees of nodes in the graph."""
     in_degree_dict={}
     for node,node_neighbours in digraph.iteritems():
         if not node in in_degree_dict:
@@ -37,7 +39,9 @@ def compute_in_degrees(digraph):
 
 
 def in_degree_distribution(digraph):
-    """ Returns a dictionary whose keys correspond to in-degrees of nodes in the graph.  """
+    """
+    Function computes indegree_distribution of a complete directed graph
+    Returns a dictionary whose keys correspond to in-degrees of nodes in the graph.  """
     in_degree_distribution_dict={}
     in_degree_dict=compute_in_degrees(digraph)
     for in_degree in in_degree_dict.values():
@@ -50,7 +54,7 @@ def in_degree_distribution(digraph):
 
 def main():
     """
-    Driver Function
+    Driver Main Function
     """
     print EX_GRAPH0
     print compute_in_degrees(EX_GRAPH0)
